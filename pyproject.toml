@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "finalproject"
+version = "0.1.0"
+description = ""
+authors = ["ZatokaV <zatokav@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+django = "^4.2.3"
+psycopg2 = "^2.9.6"
+python-dotenv = "^1.0.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
