@@ -1,26 +1,17 @@
+from django.http import JsonResponse
 from django.shortcuts import render
-from .forms import ImageUploadForm
-
-
-def classify_image(image):
-    pass
+from .vgg_classification import classify_image
 
 
 def home(request):
-    result = None
-
     if request.method == 'POST':
-        form = ImageUploadForm(request.POST, request.FILES)
-        if form.is_valid():
-            image = form.cleaned_data['image']
+        image = request.FILES.get('image')
 
+        if image:
             result = classify_image(image)
+
+            return JsonResponse({'predicted_class': result})
+        else:
+            return JsonResponse({'error': 'No image provided'}, status=400)
     else:
-        form = ImageUploadForm()
-
-    context = {
-        'form': form,
-        'result': result
-    }
-
-    return render(request, 'prediction_app/home.html', context)
+        return render(request, 'prediction_app/home.html')
