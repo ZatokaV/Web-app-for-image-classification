@@ -3,9 +3,10 @@ from . import views
 from django.conf import settings
 from django.conf.urls.static import static
 
-urlpatterns = [
+'''Add a URL to urlpatterns'''
+urlpatterns: list = [
     path('', views.home, name='home'),
-] + static(settings.STATIC_URL, document_root=settings.STATICFILES_DIRS[0])
+]
 
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATICFILES_DIRS[0])
