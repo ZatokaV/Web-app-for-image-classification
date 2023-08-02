@@ -1,18 +1,32 @@
-<!DOCTYPE html>
+{% load static %}
 <html>
 <head>
     <title>Image Classification</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
 </head>
 <body>
-    <h1>Image Classification</h1>
-    <form action="{% url 'home' %}" method="post" enctype="multipart/form-data">
-        {% csrf_token %}
-        <input type="file" name="image">
-        <input type="submit" value="Classify">
-    </form>
+    <div class="container">
+        <h1>Image Classification</h1>
+        <form action="{% url 'home' %}" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <input type="file" name="image" id="upload" accept="image/*" hidden/>
+            <label for="upload">Choose file</label>
+            <input type="submit" value="Submit" id="submitBtn" hidden>
+        </form>
+    </div>
 
-    {% if predicted_class %}
-        <h2>Predicted Class: {{ predicted_class }}</h2>
+    {% if predict_res %}
+        <div class="result-container">
+            <div class="image-container">
+                <h2>Uploaded Image:</h2>
+                <img src="data:image/jpeg;base64,{{ image }}" alt="Uploaded Image">
+            </div>
+            <div class="prediction-container">
+                <h2>Predicted Class: {{ predict_res }}</h2>
+            </div>
+        </div>
     {% endif %}
+
+    <script src="{% static 'js/button.js' %}"></script>
 </body>
 </html>

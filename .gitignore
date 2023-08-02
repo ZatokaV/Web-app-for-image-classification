@@ -1,0 +1,14 @@
+prediction_pic/prediction_app/__pycache__/__init__.cpython-311.pyc
+prediction_pic/prediction_app/__pycache__/vgg_classification.cpython-311.pyc
+prediction_pic/prediction_app/__pycache__/urls.cpython-311.pyc
+prediction_pic/prediction_app/__pycache__/views.cpython-311.pyc
+prediction_pic/prediction_pic/__pycache__/urls.cpython-311.pyc
+prediction_pic/prediction_pic/__pycache__/settings.cpython-311.pyc
+prediction_pic/prediction_pic/__pycache__/__init__.cpython-311.pyc
+prediction_pic/prediction_pic/__pycache__/wsgi.cpython-311.pyc
+prediction_pic/prediction_app/model_vgg_pytorch_state_dict.pt
+*.iml
+.idea
+.idea/misc.xml
+.env
+prediction_pic/prediction_app/model_vgg_pytorch_state_dict.pt

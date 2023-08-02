@@ -76,5 +76,5 @@ def classify_image(image_path):
     _, predicted = torch.max(output, 1)
 
     classes = ('plane', 'car', 'bird', 'cat', 'deer', 'dog', 'frog', 'horse', 'ship', 'truck')
-    print(f'Predicted class: {classes[predicted.item()]}')
+    return classes[predicted.item()]
 
