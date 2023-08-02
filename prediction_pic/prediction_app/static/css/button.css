@@ -1,0 +1,37 @@
+label{
+  display: inline-block;
+  background-color: #8C8FAA;
+  color: #0E3C3C;
+  padding: 1.5rem;
+  font-family: sans-serif;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+label:hover {
+    background-color: #45a049;
+}
+
+label:active {
+    background-color: #3e8e41;
+}
+
+#submitBtn {
+  background-color: #8C8FAA;
+  color: #0E3C3C;
+  padding: 1.5rem;
+  font-family: sans-serif;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  margin-top: 1rem;
+  font-size: 14px;
+}
+
+#submitBtn:hover {
+    background-color: #45a049;
+}
+
+#submitBtn:active {
+    background-color: #3e8e41;
+}

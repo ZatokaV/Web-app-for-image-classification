@@ -12,3 +12,5 @@ prediction_pic/prediction_app/model_vgg_pytorch_state_dict.pt
 .idea/misc.xml
 .env
 prediction_pic/prediction_app/model_vgg_pytorch_state_dict.pt
+.idea/Final_project_TEAM_1.iml
+.idea/misc.xml

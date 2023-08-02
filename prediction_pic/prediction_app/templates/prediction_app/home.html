@@ -3,6 +3,7 @@
 <head>
     <title>Image Classification</title>
     <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/button.css' %}">
 </head>
 <body>
     <div class="container">
@@ -11,7 +12,7 @@
             {% csrf_token %}
             <input type="file" name="image" id="upload" accept="image/*" hidden/>
             <label for="upload">Choose file</label>
-            <input type="submit" value="Submit" id="submitBtn" hidden>
+            <input type="submit" value="Predict" id="submitBtn" hidden>
         </form>
     </div>
 
@@ -22,7 +23,21 @@
                 <img src="data:image/jpeg;base64,{{ image }}" alt="Uploaded Image">
             </div>
             <div class="prediction-container">
-                <h2>Predicted Class: {{ predict_res }}</h2>
+                <div class="predict">
+                    <h2>Predicted Class: {{ predict_res }}</h2>
+                </div>
+                <div class="probabilities">
+                    <h2>Probabilities:</h2>
+                    <ul class="probability-list">
+                        {% for class_name, probability in probability %}
+                            <h2>{{ class_name }}: {{ probability }}%</h2>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="fact">
+                    <h2>Fact: </h2>
+                    <p>{{  fact  }}</p>
+                </div>
             </div>
         </div>
     {% endif %}
