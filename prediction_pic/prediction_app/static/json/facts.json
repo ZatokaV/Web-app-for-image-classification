@@ -1,0 +1,97 @@
+{
+  "Plane": {
+    "facts": [
+        "The first person in history to fly an aeroplane was Alberto Santos-Dumont. It happened on 19 October 1906 in Paris",
+        "The largest aircraft in the world was the An-225 Mriya. It was developed in the 1980s and could carry up to 640 tonnes of cargo",
+        "The highest take-off of the aircraft was made in 1962 by the American pilot Joseph Kettel. He climbed to an altitude of 112 kilometres in an X-15",
+        "The longest continuous flight on an aeroplane was made by American pilot Steve Fossett. He flew for 42 days, 19 hours and 1 minute on a GlobalFlyer aircraft",
+        "The most common type of aircraft in the world is the Boeing 737. Since 1967, more than 10,000 aircraft of this type have been produced."
+        ]
+  },
+  "Car": {
+    "facts": [
+        "The first car was invented in 1886 by Karl Benz. It was a three-wheeled car powered by a petrol engine",
+        "The fastest car in the world is the Bugatti Veyron Super Sport. It can reach speeds of up to 431 kilometres per hour",
+        "The most expensive car in the world is the Rolls-Royce Sweptail, which is estimated to cost $13 million",
+        "The most popular car in the world is the Toyota Corolla. More than 50 million cars of this type have been produced since 1966",
+        "The largest car manufacturer in the world is China. In 2021, more than 26 million cars were produced in China",
+        ""
+    ]
+  },
+  "Bird": {
+    "facts":  [
+        "Birds are the only vertebrates that can fly",
+        "The largest bird in the world is the African ostrich and the smallest is the hummingbird",
+        "Birds have very good eyesight and can see in the ultraviolet spectrum",
+        "Birds can fly very long distances. For example, a wandering albatross can fly up to 10,000 kilometres without stopping",
+        "Birds are very important for the ecosystem as they help in the spread of seeds and regulating the number of insects"
+        ]
+  },
+  "Cat": {
+    "facts": [
+      "Cats have 32 muscles in each ear",
+      "Cats can see in ultraviolet light",
+      "Cats can spin 180 degrees without moving their bodies",
+      "Cats can swim",
+      "Cats can purr thanks to special vocal cords"
+    ]
+  },
+  "Deer": {
+    "facts": [
+    "Deer have a very good sense of smell and can detect odours at a distance of up to 10 kilometres.",
+    "Deer can run at speeds of up to 80 kilometres per hour.",
+    "Reindeer have a very good sense of balance and can run on mountain slopes.",
+    "Deer are very social animals and like to spend time together.",
+    "Deer are an important symbol of many cultures and are often mentioned in myths and legends."
+    ]
+  },
+  "Dog": {
+    "facts":  [
+      "A dog's sense of smell is 100,000 times better than a human's.",
+      "A dog's heart beats at 100-140 beats per minute.",
+      "Dogs have 322 muscles in their faces, which allows them to make a wide variety of facial expressions.",
+      "Dogs can see in the dark",
+      "Dogs can see in the dark much better than humans.",
+      "Dogs are one of the most popular pets in the world."
+    ]
+  },
+  "Frog": {
+    "facts": [
+      "Frogs can jump 20 times their body length.",
+      "Frogs have very sensitive skin that helps them to sense changes in their environment.",
+      "Frogs can change the colour of their skin to adapt to their surroundings.",
+      "Frogs can change the colour of their skin to adapt to their environment.",
+      "Frogs are one of the most popular animals in the world and are often mentioned in myths and legends.",
+      "Frogs are an important source of food for many animals such as snakes, birds and predatory insects."
+    ]
+  },
+  "Horse": {
+    "facts": [
+      "Horses have 34 teeth.",
+      "Horses can see 360 degrees.",
+      "Horses can sleep standing up.",
+      "Horses can sleep standing up.",
+      "Horses can swim.", "Horses can swim.",
+      "Horses are very sensitive animals and can sense changes in human mood."
+    ]
+  },
+  "Ship": {
+    "facts": [
+    "The largest ship in the world is the Ever Given, a container ship 400 metres long and 59 metres wide.",
+    "The oldest ship in the world is the Gokstad Ship, a Viking drakkar dating back to 900 AD.",
+    "The most expensive ship in the world is Azzam, the $600 million superyacht of Sheikh Mohammed bin Rashid Al Maktoum.",
+    "The most popular type of ship is a cruise ship, with millions of people travelling on it every year.",
+    "The safest mode of transport is sea transport, in which the probability of a passenger dying in an accident is extremely low."
+    ]
+  },
+  "Truck": {
+    "facts": [
+    "There are more than 3.5 million trucks in the United States.",
+    "Trucks carry more than 70% of all cargo in the United States",
+    "The first truck was invented in 1896 by Camille Jabot and was called the Automobile Traction",
+    "The largest country in terms of the number of trucks is China, with more than 20 million trucks",
+    "The largest country in terms of freight traffic is the United States, with more than 10 billion tonnes of freight transported annually."
+    ]
+  }
+}
+

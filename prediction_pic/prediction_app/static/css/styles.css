@@ -1,0 +1,104 @@
+html {
+    height: 100%;
+}
+body {
+    text-align: center;
+    padding: 0;
+    margin: 50px;
+    background-color: #bbe9e9;
+    font-family: Georgia, serif;
+}
+
+.container {
+    margin-bottom: 20px;
+}
+
+h1 {
+    margin-bottom: 30px;
+}
+
+h2 {
+    margin-top: 20px;
+}
+
+
+.result-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+.prediction-container {
+
+}
+.image-container h2{
+    border: 2px solid #8DADD0;
+    background-color: #9BCCDF;
+    border-radius: 12rem;
+}
+.image-container img {
+    max-width: 80%;
+    height: 80%;
+}
+.image-container {
+    flex: 1;
+}
+.prediction-container {
+    text-align: center;
+    flex: 1;
+    margin-left: 20px;
+}
+.predict h2{
+    border: 2px solid #8DADD0;
+    background-color: #9BCCDF;
+    border-radius: 12rem;
+}
+
+.probability-list h2 {
+    margin-right: 30px;
+}
+
+.probabilities-wrapper {
+    border: 2px solid #8DADD0;
+    padding: 10px;
+    margin-top: 20px;
+}
+.probabilities-wrapper {
+    margin-top: 20px;
+}
+
+.probability-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 10px;
+    margin-top: 5px;
+
+}
+
+
+.class-name {
+    font-size: 18px;
+}
+
+.probabilities {
+  border: 2px solid #8DADD0;
+  background-color: #9BCCDF;
+  border-radius: 12px;
+}
+
+.fact {
+  margin-top: 20px;
+  border: 2px solid #8DADD0;
+  background-color: #9BCCDF;
+  border-radius: 12px;
+}
+
+.fact p{
+   font-size: 18px;
+   font-weight: bold;
+   font-style: italic;
+   padding: 15;
+}

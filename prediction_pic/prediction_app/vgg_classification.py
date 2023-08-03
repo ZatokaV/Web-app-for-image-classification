@@ -73,8 +73,13 @@ def classify_image(image_path):
     image = transform(image).unsqueeze(0).to(device)
 
     output, _ = model(image)
-    _, predicted = torch.max(output, 1)
+    probabilities = torch.softmax(output, dim=1)
 
-    classes = ('plane', 'car', 'bird', 'cat', 'deer', 'dog', 'frog', 'horse', 'ship', 'truck')
-    print(f'Predicted class: {classes[predicted.item()]}')
+    classes = ('Plane', 'Car', 'Bird', 'Cat', 'Deer', 'Dog', 'Frog', 'Horse', 'Ship', 'Truck')
+
+    top_probabilities, top_indices = torch.topk(probabilities, k=3, dim=1)
+    class_probabilities = [(classes[i], round(float(p) * 100, 2)) for i, p in zip(top_indices[0], top_probabilities[0])]
+    predicted_class = classes[top_indices[0][0].item()]
+
+    return predicted_class, class_probabilities
 
