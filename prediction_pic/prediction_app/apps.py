@@ -2,5 +2,9 @@ from django.apps import AppConfig
 
 
 class PredictionAppConfig(AppConfig):
-    default_auto_field = 'django.db.models.BigAutoField'
-    name = 'prediction_app'
+    """configuration class for the project, located in a submodule named apps.py"""
+    default_auto_field: str = 'django.db.models.BigAutoField'
+    name: str = 'prediction_app'
+
+
+print(PredictionAppConfig.__doc__)

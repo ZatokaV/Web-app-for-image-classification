@@ -19,12 +19,12 @@ SECRET_KEY = 'django-insecure-#0)^yr61efme91ej!%joz#rmnn*r3xqi770!^5)khx=^@#+b)5
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS: list = []
 
 
 # Application definition
 
-INSTALLED_APPS = [
+INSTALLED_APPS: list[str] = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -33,7 +33,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 ]
 
-MIDDLEWARE = [
+MIDDLEWARE: list[str] = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -43,9 +43,9 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'prediction_pic.urls'
+ROOT_URLCONF: str = 'prediction_pic.urls'
 
-TEMPLATES = [
+TEMPLATES: list[dict[str, bool | dict[str, list[str]] | str | list[str]]] = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [os.path.join(BASE_DIR, 'prediction_app', 'templates')],
@@ -61,27 +61,32 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'prediction_pic.wsgi.application'
+WSGI_APPLICATION: str = 'prediction_pic.wsgi.application'
 
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-DATABASES = {
+DATABASES: dict[str, dict[str, str | None | dict[str, str]]] = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'tybugpza',
         'USER': 'tybugpza',
         'PASSWORD': DB_PASSWORD,
         'HOST': 'snuffleupagus.db.elephantsql.com',
         'PORT': '',
+        'TEST': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': 'test_tybugpza',
+        },
     }
 }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
 
-AUTH_PASSWORD_VALIDATORS = [
+AUTH_PASSWORD_VALIDATORS: list[dict[str, str] | dict[str, str] | dict[str, str] | dict[str, str]] = [
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
     },
@@ -100,23 +105,23 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE: str = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE: str = 'UTC'
 
-USE_I18N = True
+USE_I18N: bool = True
 
-USE_TZ = True
+USE_TZ: bool = True
 
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = '/static/'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'prediction_app', 'static')]
+STATIC_URL: str = '/static/'
+STATICFILES_DIRS: list[str] = [os.path.join(BASE_DIR, 'prediction_app', 'static')]
 
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
-DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+DEFAULT_AUTO_FIELD: str = 'django.db.models.BigAutoField'
