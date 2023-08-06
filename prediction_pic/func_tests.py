@@ -4,7 +4,7 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 import unittest
 
-url = 'http://127.0.0.1:8000/'
+url = 'http://127.0.0.1:8000'
 result = requests.get(url)
 assert 200 == result.status_code
 if result.status_code == 200:
@@ -19,9 +19,9 @@ class TestSelenium(unittest.TestCase):
     def test(self) -> None:
         driver = webdriver.Chrome()
         driver.maximize_window()
-        driver.get("http://127.0.0.1:8000/")
+        driver.get(url)
         search_field = driver.find_element(By.ID, "upload")
-        search_field.send_keys(os.getcwd() + "/dog.jfif")
+        search_field.send_keys(os.getcwd() + "/prediction_app/images/dog.jfif")
 
         button = driver.find_element(By.ID, 'submitBtn')
         button.click()
