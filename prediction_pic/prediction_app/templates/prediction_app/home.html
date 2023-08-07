@@ -11,7 +11,7 @@
         <form action="{% url 'home' %}" method="post" enctype="multipart/form-data">
             {% csrf_token %}
             <input type="file" name="image" id="upload" accept="image/*" hidden/>
-            <label for="upload">Choose file</label>
+            <label for="upload">Choose image</label>
             <input type="submit" value="Predict" id="submitBtn" hidden>
         </form>
     </div>
@@ -20,7 +20,10 @@
         <div class="result-container">
             <div class="image-container">
                 <h2>Uploaded Image:</h2>
-                <img src="data:image/jpeg;base64,{{ image }}" alt="Uploaded Image">
+                <div class="images-cont">
+                    <img src="data:image/jpeg;base64,{{ image }}" alt="Uploaded Image">
+                    <img src="data:image/jpeg;base64, {{ gradient }} " alt="Uploaded Image">
+                 </div>
             </div>
             <div class="prediction-container">
                 <div class="predict">
@@ -39,6 +42,11 @@
                     <p>{{  fact  }}</p>
                 </div>
             </div>
+        </div>
+        <div class="heatmap">
+            {% for img in activation_img %}
+            <img src="data:image/jpeg;base64, {{ img }} " alt="Uploaded Image">
+            {% endfor %}
         </div>
     {% endif %}
 
