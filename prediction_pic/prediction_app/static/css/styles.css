@@ -7,6 +7,8 @@ body {
     margin: 50px;
     background-color: #bbe9e9;
     font-family: Georgia, serif;
+    padding-bottom: 30px;
+    margin-top: 10px;
 }
 
 .container {
@@ -14,7 +16,7 @@ body {
 }
 
 h1 {
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 
 h2 {
@@ -30,19 +32,30 @@ h2 {
 
 
 .prediction-container {
-
+    flex: 1
 }
 .image-container h2{
     border: 2px solid #8DADD0;
     background-color: #9BCCDF;
-    border-radius: 12rem;
+    border-radius: 1rem;
 }
-.image-container img {
-    max-width: 80%;
-    height: 80%;
+.images-cont img {
+   width: 300;
+   height: 330;
+   margin: 5px;
+
 }
 .image-container {
+    display: flex;
+    flex-direction: column;
     flex: 1;
+}
+.images-cont{
+    display: flex;
+    justify-content: space-evenly;
+    border: 2px solid #8DADD0;
+    background-color: #9BCCDF;
+    border-radius: 1rem;
 }
 .prediction-container {
     text-align: center;
@@ -101,4 +114,21 @@ h2 {
    font-weight: bold;
    font-style: italic;
    padding: 15;
+}
+
+.heatmap{
+   display: flex;
+   justify-content: space-evenly;
+   margin-top: 20px;
+   border: 2px solid #8DADD0;
+   background-color: #9BCCDF;
+   border-radius: 1rem;
+   margin-bottom: 10px
+}
+
+.heatmap img{
+   display: flex;
+   max-width: 300;
+   height: 320;
+   margin: 5px;
 }

@@ -9,3 +9,9 @@ document.getElementById("upload").addEventListener("change", function() {
         document.getElementById("submitBtn").hidden = true;
     }
 });
+
+
+document.getElementById("submitBtn").addEventListener("click", function() {
+
+    document.getElementById("submitBtn").hidden = true;
+});
