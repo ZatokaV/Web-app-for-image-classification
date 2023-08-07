@@ -147,6 +147,7 @@ def classify_image(image_path):
     top_probabilities, top_indices = torch.topk(probabilities, k=3, dim=1)
     class_probabilities = [(classes[i], round(float(p) * 100, 2)) for i, p in zip(top_indices[0], top_probabilities[0])]
     predicted_class = classes[top_indices[0][0].item()]
+
     '''
       Function return:
           1. predicted_class:
@@ -160,3 +161,7 @@ def classify_image(image_path):
       '''
 
     return predicted_class, class_probabilities, activation_img_output, superimposed_img
+
+
+
+
