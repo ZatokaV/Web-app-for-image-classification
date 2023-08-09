@@ -2,6 +2,8 @@ import io
 import cv2
 import matplotlib
 matplotlib.use('Agg')
+cv2.setUseOptimized(True)
+cv2.setNumThreads(0)
 
 import matplotlib.pyplot as plt
 import numpy as np
@@ -110,10 +112,11 @@ def classify_image(image_path):
 
     for i in range(3):
         fig = plt.gcf()
+        plt.axis('off')
         plt.imshow(activation['cnn_0'][0, i, :, :].cpu().numpy(),
                    cmap=plt.cm.inferno, alpha=.9, interpolation='sinc')
         buf = io.BytesIO()
-        fig.savefig(buf, format='JPEG')
+        fig.savefig(buf, format='JPEG', bbox_inches='tight', pad_inches=0)
         buf.seek(0)
         img = Image.open(buf)
         activation_img_output.append(img)
@@ -132,7 +135,7 @@ def classify_image(image_path):
     plt.imshow(superimposed_img.astype(np.uint8) / 255)  # !!!!!
 
     buf = io.BytesIO()
-    fig.savefig(buf, format='JPEG')
+    fig.savefig(buf, format='JPEG', bbox_inches='tight', pad_inches=0)
     buf.seek(0)
     superimposed_img = Image.open(buf)
 
