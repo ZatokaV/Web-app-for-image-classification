@@ -1,16 +1,11 @@
-# Використовуємо офіційний базовий образ Python
-FROM python:3.8
-
-# Встановлюємо залежності
+FROM python:3.10
+ENV PYTHONDONTWRITEBYTECODE=1
+ENV PYTHONUNBUFFERED=1
 RUN pip install --upgrade pip
 COPY requirements.txt /tmp/requirements.txt
 RUN pip install -r /tmp/requirements.txt
-
-# Створюємо робочий каталог /app
+RUN apt-get update && apt-get install ffmpeg libsm6 libxext6  -y
 WORKDIR /app
-
-# Копіюємо файли вашого Django-проекту в контейнер
 COPY . /app
-
-# Запускаємо сервер Django
+EXPOSE 8000
 CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
