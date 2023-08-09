@@ -3,3 +3,5 @@ psycopg2
 python-dotenv
 torch
 torchvision
+opencv-python
+matplotlib
